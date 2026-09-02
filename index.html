@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E-commerce Profit Calculator</title>
+   <!-- PWA Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Calculate your Flipkart, Amazon, and Meesho profit margins, GST, and RTO charges easily with this free e-commerce profit calculator.">
+<meta name="keywords" content="e commerce calculator, flipkart profit calculator, amazon profit calculation, meesho profit calculator, seller profit calculator">
+<meta name="author" content="Sahid Khan">
+<meta name="robots" content="index, follow">
+   
 <style>
     * { box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
     body { 
@@ -295,6 +304,11 @@
 
     calculate();
     renderTable();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+  }
 </script>
 
 </body>
